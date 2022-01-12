@@ -1,0 +1,20 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Vazir, Arial, Helvetica, sans-serif;
+}
+
+body{
+  min-height: 100vh;
+  background: linear-gradient( 45deg, rgba($body-color, .3), rgba($body-color, .5), rgba($body-color, 1) );
+  max-width: 100vw;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+a:hover{
+  color: inherit;
+}

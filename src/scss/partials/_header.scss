@@ -1,0 +1,38 @@
+#header {
+  background: linear-gradient(45deg, rgba($lighten-color, .3), rgba($lighten-color, .5), rgba($lighten-color, 1));
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .7rem;
+
+    .header-brand {
+      font-weight: bolder;
+      color: $main-color;
+    }
+  }
+
+  .modal-btn {
+    color: $main-color;
+    position: relative;
+    font-size: 1.1rem;
+    margin-top: .5rem;
+
+    .badge {
+      position: absolute;
+      padding: .2rem .3rem .0;
+      min-width: 1.2rem;
+      height: 1.2rem;
+      font-size: .8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $medium-color;
+      color: white;
+      border-radius: 50rem;
+      right: -.6rem;
+      top: -.75rem;
+    }
+  }
+}

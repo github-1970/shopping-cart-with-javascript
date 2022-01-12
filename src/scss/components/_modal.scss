@@ -1,0 +1,111 @@
+.modal-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background: rgba($light-color, .3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .modal{
+    padding: 1rem;
+    background: white;
+    border-radius: .3rem;
+    text-align: center;
+    box-shadow: 0 0 5rem $light-color;
+    min-width: 35%;
+
+    .modal-header{
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+
+      .fa-times-circle{
+        color: $main-color;
+        cursor: pointer;
+      }
+    }
+
+    .cart-item{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem 1rem;
+      text-align: center;
+      &{
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $main-color;
+        margin-bottom: 1rem;
+      }
+
+      img{
+        border-radius: .3rem;
+      }
+
+      &-actions{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .cart-item-counter{
+          display: flex;
+          flex-direction: column;
+
+          .fa-angle-up{
+            color: rgb(5, 206, 5);
+          }
+          .fa-angle-down{
+            color: $medium-color;
+          }
+        }
+
+        .cart-item-remove{
+          margin-right: 1.6rem;
+          color: $main-color;
+        }
+
+        svg{
+          cursor: pointer;
+        }
+      }
+    }
+
+    .modal-footer{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      align-items: center;
+      justify-content: center;
+
+      .btn-group{
+        .btn{
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .modal-container .modal{
+    min-width: 55%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .modal-container .modal{
+    min-width: 65%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .modal{
+    width: 90%;
+    margin: 0 0 0 1rem;
+
+    .modal-footer{
+      grid-template-columns: 1fr !important;
+    }
+  }
+}

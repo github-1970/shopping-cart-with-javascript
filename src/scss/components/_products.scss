@@ -1,0 +1,25 @@
+.products-item{
+  background: white;
+  border-radius: .3rem;
+  text-align: center;
+
+  img{
+    border-radius: .3rem .3rem 0 .0;
+    width: 100%;
+    height: 17rem;
+  }
+
+  .products-content{
+    padding: 1rem;
+
+    .products-detail{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+
+      .products-price-number{
+        color: $main-color;
+      }
+    }
+  }
+}
