@@ -1,7 +1,23 @@
 import '@fortawesome/fontawesome-free/js/all'
 import '../scss/main.scss'
 import Modal from './Modal'
-import productsData from './productsData.json'
+import Products from './Products'
+import UI from './UI'
+
+// display products in start app
+let ui = new UI()
+ui.displayProducts().then(() => {
+  let products = new Products()
+  // start add to carts event
+  products.addToCart()
+})
+
+
+
+
+
+
+
 
 // modal events
 const modal = new Modal()

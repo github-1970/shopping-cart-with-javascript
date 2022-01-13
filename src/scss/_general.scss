@@ -7,11 +7,19 @@
   cursor: pointer;
   color: white;
   transition: .3s;
-}
-.btn:hover{
-  background: $lighten-color;
-  color: $main-color;
-  transform: scale(1.1);
+
+  &:hover{
+    background: $lighten-color;
+    color: $main-color;
+    transform: scale(1.1);
+  }
+
+  &[disabled]{
+    background: $lighten-color;
+    color: $main-color;
+    transform: scale(1.1);
+    cursor: not-allowed;
+  }
 }
 
 .btn-outline{
