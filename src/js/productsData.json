@@ -3,66 +3,66 @@
     "id": 1,
     "title": "خانه لوکس جدید",
     "price": 220,
-    "imgURL": "../../img/1.jpg"
+    "imgURL": "../img/1.jpg"
   },
   {
     "id": 2,
     "title": "مبل جدید",
     "price": 499,
-    "imgURL": "../../img/2.jpg"
+    "imgURL": "../img/2.jpg"
   },
   {
     "id": 3,
     "title": "تابلو",
     "price": 132,
-    "imgURL": "../../img/3.jpg"
+    "imgURL": "../img/3.jpg"
   },
   {
     "id": 4,
     "title": "خانه لوکس",
     "price": 581,
-    "imgURL": "../../img/4.jpg"
+    "imgURL": "../img/4.jpg"
   },
   {
     "id": 5,
     "title": "مبل مشکی",
     "price": 33,
-    "imgURL": "../../img/5.jpg"
+    "imgURL": "../img/5.jpg"
   },
   {
     "id": 6,
     "title": "کاج کوچک",
     "price": 234,
-    "imgURL": "../../img/6.jpg"
+    "imgURL": "../img/6.jpg"
   },
   {
     "id": 7,
     "title": "مبل زرد",
     "price": 865,
-    "imgURL": "../../img/7.jpg"
+    "imgURL": "../img/7.jpg"
   },
   {
     "id": 8,
     "title": "مبل فیروزه‌ای",
     "price": 94,
-    "imgURL": "../../img/8.jpg"
+    "imgURL": "../img/8.jpg"
   },
   {
     "id": 9,
     "title": "میز و صندلی",
     "price": 135,
-    "imgURL": "../../img/9.jpg"
+    "imgURL": "../img/9.jpg"
   },
   {
     "id": 10,
     "title": "خانه طوسی",
     "price": 786,
-    "imgURL": "../../img/10.jpg"
+    "imgURL": "../img/10.jpg"
   },
   {
     "id": 11,
     "title": "خانه شیک",
     "price": 698,
-    "imgURL": "../../img/11.jpg"
+    "imgURL": "../img/11.jpg"
   }
 ]
