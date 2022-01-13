@@ -1,52 +1,18 @@
 import '@fortawesome/fontawesome-free/js/all'
 import '../scss/main.scss'
 import Modal from './Modal'
+import productsData from './productsData.json'
 
-const modals = new Modal()
+// modal events
+const modal = new Modal()
 
-
-
-
-
-
-console.log(modals.closeBtn)
-
-const modalContainer = document.querySelector('.modal-container')
-const modal = document.querySelector('.modal')
-const modalBtn = document.querySelector('.modal-btn')
-const closeBtn = document.querySelector('.close-modal')
-const successBtn = document.querySelector('.btn-success')
-
-modalBtn.addEventListener('click', (e) => {
+modal.modalBtn.addEventListener('click', (e) => {
   e.preventDefault()
-
-  modalContainer.style.zIndex = '1'
-  modalContainer.style.opacity = '1'
-
-  modal.style.opacity = '1'
-  modal.style.transform = 'translateY(0)'
+  modal.openModal()
 })
 
-closeBtn.addEventListener('click', (e) => {
+modal.closeBtn.addEventListener('click', (e) => {
   e.preventDefault()
-
-  closeModal()
+  modal.closeModal()
 })
-
-successBtn.addEventListener('click', () => {
-  closeModal()
-})
-
-window.addEventListener('click', (e) => {
-  if (e.target == modalContainer) {
-    closeModal()
-  }
-})
-
-function closeModal(){
-  modalContainer.style.zIndex = '-1'
-  modalContainer.style.opacity = '0'
-
-  modal.style.opacity = '0'
-  modal.style.transform = 'translateY(-100%)'
-}
+// end modal
