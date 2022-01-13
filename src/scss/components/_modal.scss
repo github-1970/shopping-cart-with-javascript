@@ -4,10 +4,26 @@
   right: 0;
   width: 100vw;
   min-height: 100vh;
-  background: rgba($light-color, .3);
   display: flex;
   justify-content: center;
   align-items: center;
+  background: rgba($light-color, .3);
+  transition: all .8s;
+
+  // in start
+  z-index: -1;
+  opacity: 0;
+
+  .modal-overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    min-height: 100%;
+    background: rgba($light-color, .3);
+    z-index: 1;
+    display: block;
+  }
 
   .modal{
     padding: 1rem;
@@ -16,6 +32,15 @@
     text-align: center;
     box-shadow: 0 0 5rem $light-color;
     min-width: 35%;
+    z-index: 2;
+    overflow-y: auto;
+    max-height: 90vh;
+    min-height: 15rem;
+    transition: all 1s;
+    
+    // in start
+    opacity: 0;
+    transform: translateY(-100%);
 
     .modal-header{
       margin-bottom: 2rem;
@@ -89,6 +114,17 @@
   }
 }
 
+// .modal-overlay{
+//   position: fixed;
+//   top: 0;
+//   right: 0;
+//   width: 100vw;
+//   min-height: 100%;
+//   background: rgba($light-color, .3);
+//   z-index: 1;
+//   display: none;
+// }
+
 @media screen and (max-width: 1300px) {
   .modal-container .modal{
     min-width: 55%;
@@ -108,4 +144,10 @@
       grid-template-columns: 1fr !important;
     }
   }
+}
+
+
+@keyframes slideIn {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
 }
