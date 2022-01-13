@@ -1,58 +1,60 @@
-import Products from './Products'
-import Storage from './Storage'
+import Cart from "./Cart";
+import Products from "./Products";
+import Storage from "./Storage";
 
 export default class UI {
-  // display dynamic products
   constructor() {
-    this.productsContainer = document.querySelector('.products-container')
-    this.products = new Products().getProducts()
+    this.productsContainer = document.querySelector(".products-container");
+    this.products = new Products().getProducts();
   }
 
+  // display dynamic products
+  // set async just for return promise
   async displayProducts() {
-    this.products.forEach(product => {
-      let elem = document.createElement('div')
+    this.productsContainer.innerHTML = "";
 
-      // check element in to carts list
-      let cartsData = Storage.getCartsData()
-      let checkBtnDisabled = cartsData.some(cartData => {
-        return cartData.id == product.id
-      })
-      let disabled = ''
-      if(checkBtnDisabled){
-        disabled = 'disabled'
+    this.products.forEach((product) => {
+      let elem = document.createElement("div");
+      elem.classList.add("products-item");
+      elem.dataset.id = product.id;
+
+      // check elements is into carts list
+      let cartsData = Storage.getCartsData();
+      let checkBtnDisabled = cartsData.some((cartData) => {
+        return cartData.id == product.id;
+      });
+      let disabled = "";
+      let btnText = "اضافه به سبد خرید";
+      if (checkBtnDisabled) {
+        disabled = "disabled";
+        btnText = "در سبد خرید موجود است!";
       }
 
       elem.innerHTML = `
-      <div class="products-item" data-id="${product.id}">
-      <img src="${product.imgURL}"
-        alt="product ${product.id}"
-        width="100">
+        <img src="${product.imgURL}"
+          alt="product ${product.id}"
+          width="100">
 
-      <div class="products-content">
-        <div class="products-detail">
-          <span class="products-title">${product.title}</span>
-          <span class="products-price">
-            <span class="products-price-number">${product.price}</span>
-            <span>هزار تومان</span>
-          </span>
+        <div class="products-content">
+          <div class="products-detail">
+            <span class="products-title">${product.title}</span>
+            <span class="products-price">
+              <span class="products-price-number">${product.price}</span>
+              <span>هزار تومان</span>
+            </span>
+          </div>
+
+          <button class="btn" ${disabled}>${btnText}</button>
         </div>
+      `;
 
-        <button class="btn" ${disabled}>اضافه به سبد خرید</button>
-      </div>
-    </div>
-      `
+      this.productsContainer.appendChild(elem);
 
-      this.productsContainer.appendChild(elem)
+      return true;
+    });
 
-      // another tasks
-      new UI().updateCartBadge()
-    })
+    // another tasks
+    // set count in cart badge, in start app
+    Cart.updateCartBadge();
   }
-
-  updateCartBadge(){
-    let badge = document.querySelector('.badge')
-    let cartsData = Storage.getCartsData()
-    badge.innerText = cartsData.length
-  }
-
 }

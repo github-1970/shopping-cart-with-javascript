@@ -1,46 +1,41 @@
 <!DOCTYPE html>
-<html lang="en"
-  dir="rtl">
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible"
-    content="IE=edge">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
-  <title>Shopping Cart</title>
-</head>
+  <body>
+    <!-- header -->
+    <header id="header">
+      <div class="container">
+        <div class="header-content">
+          <!-- <div class="search"></div> -->
+          <a href="#">
+            <h2 class="header-brand">Rasool Brand</h2>
+          </a>
 
-<body>
-  <!-- header -->
-  <header id="header">
-    <div class="container">
-      <div class="header-content">
-        <!-- <div class="search"></div> -->
-        <a href="#">
-          <h2 class="header-brand">Rasool Brand</h2>
-        </a>
-        
-        <a href="#"
-          class="modal-btn">
-          <i class="fas fa-cart-plus fa-lg"></i>
-          <div class="badge">0</div>
-        </a>
+          <a href="#" class="modal-btn">
+            <i class="fas fa-cart-plus fa-lg"></i>
+            <div class="badge">0</div>
+          </a>
+        </div>
       </div>
-    </div>
 
-    <div class="modal-container">
-      <div class="modal">
-        <div class="modal-header">
-          <span class="space"></span>
-          <h2>سبد خرید شما</h2>
-          <span class="close-modal">
-            <i class="fas fa-times-circle fa-2x"></i>
-          </span>
-        </div>
+      <div class="modal-container">
+        <div class="modal">
+          <div class="modal-header">
+            <span class="space"></span>
+            <h2>سبد خرید شما</h2>
+            <span class="close-modal">
+              <i class="fas fa-times-circle fa-2x"></i>
+            </span>
+          </div>
 
-        <div class="modal-content">
-          <div class="cart-item">
+          <div class="modal-content">
+            <!-- <div class="cart-item">
             <img src="../img/1.jpg"
               alt="product 1"
               width="100">
@@ -55,224 +50,46 @@
 
             <div class="cart-item-actions">
               <div class="cart-item-counter">
-                <i class="fas fa-angle-up fa-lg"></i>
-                <span class="cart-item-count">1</span>
-                <i class="fas fa-angle-down fa-lg"></i>
+                <span class="cart-item-counter-up">
+                  <i class="fas fa-angle-up fa-lg"></i>
+                </span>
+                <span class="cart-item-counter-number">1</span>
+                <span class="cart-item-counter-down">
+                  <i class="fas fa-angle-down fa-lg"></i>
+                </span>
               </div>
 
               <div class="cart-item-remove">
                 <i class="fas fa-trash-alt fa-lg"></i>
               </div>
             </div>
+          </div> -->
           </div>
 
-          <div class="cart-item">
-            <img src="../img/1.jpg"
-              alt="product 1"
-              width="100">
+          <div class="modal-footer text-center">
+            <span class="cart-total-price">
+              <span>قیمت کل سبد خرید: </span>
+              <span class="cart-total-price-number">300</span>
+              <span>هزار تومان</span>
+            </span>
 
-            <div class="cart-item-detial">
-              <h4 class="cart-item-title">hi</h4>
-              <div class="cart-item-price">
-                <span class="cart-item-price-number">100</span>
-                <span>هزار تومان</span>
-              </div>
+            <div class="btn-group">
+              <span class="btn-outline btn-clear">خالی کردن سبد خرید</span>
+              <span class="btn btn-success">تایید</span>
             </div>
-
-            <div class="cart-item-actions">
-              <div class="cart-item-counter">
-                <i class="fas fa-angle-up fa-lg"></i>
-                <span class="cart-item-count">1</span>
-                <i class="fas fa-angle-down fa-lg"></i>
-              </div>
-
-              <div class="cart-item-remove">
-                <i class="fas fa-trash-alt fa-lg"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="cart-item">
-            <img src="../img/1.jpg"
-              alt="product 1"
-              width="100">
-
-            <div class="cart-item-detial">
-              <h4 class="cart-item-title">hi</h4>
-              <div class="cart-item-price">
-                <span class="cart-item-price-number">100</span>
-                <span>هزار تومان</span>
-              </div>
-            </div>
-
-            <div class="cart-item-actions">
-              <div class="cart-item-counter">
-                <i class="fas fa-angle-up fa-lg"></i>
-                <span class="cart-item-count">1</span>
-                <i class="fas fa-angle-down fa-lg"></i>
-              </div>
-
-              <div class="cart-item-remove">
-                <i class="fas fa-trash-alt fa-lg"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="cart-item">
-            <img src="../img/1.jpg"
-              alt="product 1"
-              width="100">
-
-            <div class="cart-item-detial">
-              <h4 class="cart-item-title">hi</h4>
-              <div class="cart-item-price">
-                <span class="cart-item-price-number">100</span>
-                <span>هزار تومان</span>
-              </div>
-            </div>
-
-            <div class="cart-item-actions">
-              <div class="cart-item-counter">
-                <i class="fas fa-angle-up fa-lg"></i>
-                <span class="cart-item-count">1</span>
-                <i class="fas fa-angle-down fa-lg"></i>
-              </div>
-
-              <div class="cart-item-remove">
-                <i class="fas fa-trash-alt fa-lg"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="cart-item">
-            <img src="../img/1.jpg"
-              alt="product 1"
-              width="100">
-
-            <div class="cart-item-detial">
-              <h4 class="cart-item-title">hi</h4>
-              <div class="cart-item-price">
-                <span class="cart-item-price-number">100</span>
-                <span>هزار تومان</span>
-              </div>
-            </div>
-
-            <div class="cart-item-actions">
-              <div class="cart-item-counter">
-                <i class="fas fa-angle-up fa-lg"></i>
-                <span class="cart-item-count">1</span>
-                <i class="fas fa-angle-down fa-lg"></i>
-              </div>
-
-              <div class="cart-item-remove">
-                <i class="fas fa-trash-alt fa-lg"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="cart-item">
-            <img src="../img/1.jpg"
-              alt="product 1"
-              width="100">
-
-            <div class="cart-item-detial">
-              <h4 class="cart-item-title">hi</h4>
-              <div class="cart-item-price">
-                <span class="cart-item-price-number">100</span>
-                <span>هزار تومان</span>
-              </div>
-            </div>
-
-            <div class="cart-item-actions">
-              <div class="cart-item-counter">
-                <i class="fas fa-angle-up fa-lg"></i>
-                <span class="cart-item-count">1</span>
-                <i class="fas fa-angle-down fa-lg"></i>
-              </div>
-
-              <div class="cart-item-remove">
-                <i class="fas fa-trash-alt fa-lg"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="cart-item">
-            <img src="../img/1.jpg"
-              alt="product 1"
-              width="100">
-
-            <div class="cart-item-detial">
-              <h4 class="cart-item-title">hi</h4>
-              <div class="cart-item-price">
-                <span class="cart-item-price-number">100</span>
-                <span>هزار تومان</span>
-              </div>
-            </div>
-
-            <div class="cart-item-actions">
-              <div class="cart-item-counter">
-                <i class="fas fa-angle-up fa-lg"></i>
-                <span class="cart-item-count">1</span>
-                <i class="fas fa-angle-down fa-lg"></i>
-              </div>
-
-              <div class="cart-item-remove">
-                <i class="fas fa-trash-alt fa-lg"></i>
-              </div>
-            </div>
-          </div>
-          
-          <div class="cart-item">
-            <img src="../img/1.jpg"
-              alt="product 1"
-              width="100">
-
-            <div class="cart-item-detial">
-              <h4 class="cart-item-title">hi</h4>
-              <div class="cart-item-price">
-                <span class="cart-item-price-number">100</span>
-                <span>هزار تومان</span>
-              </div>
-            </div>
-
-            <div class="cart-item-actions">
-              <div class="cart-item-counter">
-                <i class="fas fa-angle-up fa-lg"></i>
-                <span class="cart-item-count">1</span>
-                <i class="fas fa-angle-down fa-lg"></i>
-              </div>
-
-              <div class="cart-item-remove">
-                <i class="fas fa-trash-alt fa-lg"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal-footer">
-          <span class="cart-all-price">
-            <span>قیمت کل سبد خرید: </span>
-            <span>300</span>
-            <span class="cart-all-price-number">هزار تومان</span>
-          </span>
-
-          <div class="btn-group">
-            <span class="btn-outline">خالی کردن سبد خرید</span>
-            <span class="btn btn-success">تایید</span>
           </div>
         </div>
       </div>
-    </div>
-  </header>
-  <!-- end header -->
+    </header>
+    <!-- end header -->
 
-  <!-- products -->
-  <section id="products">
-    <div class="container">
-      <h1>محصولات ما</h1>
+    <!-- products -->
+    <section id="products">
+      <div class="container">
+        <h1>محصولات ما</h1>
 
-      <div class="products-container">
-        <!-- <div class="products-item">
+        <div class="products-container">
+          <!-- <div class="products-item">
           <img src="../img/1.jpg"
             alt="product 1"
             width="100">
@@ -289,83 +106,9 @@
             <button class="btn">اضافه به سبد خرید</button>
           </div>
         </div> -->
-
-        <!-- 
-        <div class="products-item">
-          <img src="../img/2.jpg"
-            alt="product 2"
-            width="100">
-
-          <div class="products-content">
-            <div class="products-detail">
-              <span class="products-title">کابینت قدیمی</span>
-              <span class="products-price">
-                <span class="products-price-number">499</span>
-                <span>هزار تومان</span>
-              </span>
-            </div>
-
-            <button class="btn">اضافه به سبد خرید</button>
-          </div>
         </div>
-
-        <div class="products-item">
-          <img src="../img/3.jpg"
-            alt="product 3"
-            width="100">
-
-          <div class="products-content">
-            <div class="products-detail">
-              <span class="products-title">test name</span>
-              <span class="products-price">
-                <span class="products-price-number">132</span>
-                <span>هزار تومان</span>
-              </span>
-            </div>
-
-            <button class="btn">اضافه به سبد خرید</button>
-          </div>
-        </div>
-
-        <div class="products-item">
-          <img src="../img/4.jpg"
-            alt="product 4"
-            width="100">
-
-          <div class="products-content">
-            <div class="products-detail">
-              <span class="products-title">test name</span>
-              <span class="products-price">
-                <span class="products-price-number">581</span>
-                <span>هزار تومان</span>
-              </span>
-            </div>
-
-            <button class="btn">اضافه به سبد خرید</button>
-          </div>
-        </div>
-
-        <div class="products-item">
-          <img src="../img/5.jpg"
-            alt="product 5"
-            width="100">
-
-          <div class="products-content">
-            <div class="products-detail">
-              <span class="products-title">test name</span>
-              <span class="products-price">
-                <span class="products-price-number">33</span>
-                <span>هزار تومان</span>
-              </span>
-            </div>
-
-            <button class="btn">اضافه به سبد خرید</button>
-          </div>
-        </div> -->
       </div>
-    </div>
-  </section>
-  <!-- end products -->
-</body>
-
+    </section>
+    <!-- end products -->
+  </body>
 </html>

@@ -4,28 +4,18 @@
   right: 0;
   width: 100vw;
   min-height: 100vh;
-  display: flex;
+  // display: flex;
   justify-content: center;
   align-items: center;
   background: rgba($light-color, .3);
   transition: all .8s;
 
   // in start
+  display: none;
   z-index: -1;
   opacity: 0;
 
-  .modal-overlay{
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100vw;
-    min-height: 100%;
-    background: rgba($light-color, .3);
-    z-index: 1;
-    display: block;
-  }
-
-  .modal{
+  .modal {
     padding: 1rem;
     background: white;
     border-radius: .3rem;
@@ -37,76 +27,84 @@
     max-height: 90vh;
     min-height: 15rem;
     transition: all 1s;
-    
+
     // in start
     opacity: 0;
     transform: translateY(-100%);
 
-    .modal-header{
+    .modal-header {
       margin-bottom: 2rem;
       display: flex;
       justify-content: space-between;
 
-      .fa-times-circle{
+      .fa-times-circle {
         color: $main-color;
         cursor: pointer;
       }
     }
 
-    .cart-item{
+    .cart-item {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       justify-content: space-between;
       align-items: center;
       gap: 2rem 1rem;
       text-align: center;
-      &{
+
+      & {
         padding-bottom: 1rem;
         border-bottom: 1px solid $main-color;
         margin-bottom: 1rem;
       }
 
-      img{
+      img {
         border-radius: .3rem;
       }
 
-      &-actions{
+      &-actions {
         display: flex;
         justify-content: flex-end;
         align-items: center;
 
-        .cart-item-counter{
+        .cart-item-counter {
           display: flex;
           flex-direction: column;
 
-          .fa-angle-up{
+          .cart-item-counter-up,
+          .cart-item-counter-down {
+            user-select: none;
+          }
+
+          .fa-angle-up {
             color: rgb(5, 206, 5);
           }
-          .fa-angle-down{
+
+          .fa-angle-down {
             color: $medium-color;
           }
         }
 
-        .cart-item-remove{
+        .cart-item-remove {
           margin-right: 1.6rem;
           color: $main-color;
         }
 
-        svg{
+        svg {
           cursor: pointer;
         }
       }
     }
 
-    .modal-footer{
+    .modal-footer {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      // grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr;
       gap: 1rem;
       align-items: center;
       justify-content: center;
 
-      .btn-group{
-        .btn{
+      .btn-group {
+        .btn {
           margin-right: 1rem;
         }
       }
@@ -114,40 +112,25 @@
   }
 }
 
-// .modal-overlay{
-//   position: fixed;
-//   top: 0;
-//   right: 0;
-//   width: 100vw;
-//   min-height: 100%;
-//   background: rgba($light-color, .3);
-//   z-index: 1;
-//   display: none;
-// }
-
 @media screen and (max-width: 1300px) {
-  .modal-container .modal{
+  .modal-container .modal {
     min-width: 55%;
   }
 }
+
 @media screen and (max-width: 900px) {
-  .modal-container .modal{
+  .modal-container .modal {
     min-width: 65%;
   }
 }
+
 @media screen and (max-width: 768px) {
-  .modal{
+  .modal {
     width: 90%;
     margin: 0 0 0 1rem;
 
-    .modal-footer{
-      grid-template-columns: 1fr !important;
-    }
+    // .modal-footer{
+    //   grid-template-columns: 1fr !important;
+    // }
   }
-}
-
-
-@keyframes slideIn {
-  from {top: -300px; opacity: 0}
-  to {top: 0; opacity: 1}
 }

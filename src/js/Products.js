@@ -1,42 +1,42 @@
-import productsData from './productsData.json'
-import Storage from './Storage'
-import UI from './UI'
+import Cart from "./Cart";
+import productsData from "./productsData.json";
+import Storage from "./Storage";
 
 export default class Products {
-  // get products
   constructor() {
-    this.productsData = productsData
-    this.productItemsBtn = document.querySelectorAll('.products-item .btn')
+    this.productsData = productsData;
   }
 
+  // get all products
   getProducts() {
-    return this.productsData
+    return this.productsData;
   }
 
+  // add product in carts list
   addToCart() {
-    this.productItemsBtn.forEach(productItemBtn => {
-      productItemBtn.addEventListener('click', () => {
-        productItemBtn.innerText = 'در سبد خرید موجود است!'
-        productItemBtn.disabled = true
+    const productItemsBtn = document.querySelectorAll(".products-item .btn");
 
-        let productItemId = productItemBtn.closest('.products-item').dataset.id
-        let productItemData = this.productsData.find(item => {
-          return item.id === +productItemId
-        })
+    productItemsBtn.forEach((productItemBtn) => {
+      productItemBtn.addEventListener("click", () => {
+        productItemBtn.innerText = "در سبد خرید موجود است!";
+        productItemBtn.disabled = true;
+
+        let productItemId = productItemBtn.closest(".products-item").dataset.id;
+        let productItemData = this.productsData.find((item) => {
+          return item.id === +productItemId;
+        });
         if (!productItemData) {
-          return false
+          return false;
         }
 
-        let cartsData = Storage.getCartsData()
-        cartsData.push(productItemData)
-        Storage.setDataInCarts(cartsData)
+        let cartsData = Storage.getCartsData();
+        cartsData.push({ ...productItemData, count: 1 });
+        Storage.setDataInCarts(cartsData);
 
         // another tasks
         // update count in cart badge
-        new UI().updateCartBadge()
-      })
-    })
-
-
+        Cart.updateCartBadge();
+      });
+    });
   }
 }

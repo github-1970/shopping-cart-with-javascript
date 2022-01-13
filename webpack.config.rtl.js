@@ -15,7 +15,7 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
-  entry: "./src/js/index.js",
+  entry: "./src/js/app.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: IS_PROD ? "[name].[contenthash].bundle.min.js" : "[name].[contenthash].bundle.js",
